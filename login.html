@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Dòng meta viewport này là bắt buộc để web co giãn trên điện thoại/iPad -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Toán Học Vui</title>
+
+    <!-- Nhúng Font chữ -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Nhúng CSS: File chung trước, File riêng sau -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <!-- Thanh Header tự động hiển thị nhờ js/header.js -->
+
+    <!-- Khung nhập thông tin -->
+    <div class="login-box">
+        <h2 style="margin-bottom: 20px; color: #2b3674;">Vào Lớp Học</h2>
+
+        <div class="input-group">
+            <label>Mã Học Sinh (hoặc Tên đăng nhập)</label>
+            <input type="text" id="username" placeholder="Ví dụ: hs01">
+        </div>
+
+        <div class="input-group">
+            <label>Mật khẩu</label>
+            <input type="password" id="password" placeholder="Nhập mật khẩu">
+        </div>
+
+        <button class="btn-login-submit" onclick="xuLyDangNhap()">Đăng nhập</button>
+        <div id="error-msg"></div>
+    </div>
+
+    <!-- Nhúng thư viện Supabase và các file JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

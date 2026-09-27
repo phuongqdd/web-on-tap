@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết Quả Làm Bài - Toán Học Vui</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lam-bai.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body style="background-color: #f4f7fe;">
+    <div class="exam-header" style="justify-content: center;">
+        <h2 style="color: #4318ff; margin: 0;">📊 BÁO CÁO KẾT QUẢ</h2>
+    </div>
+
+    <div class="exam-container">
+        <!-- KHUNG THỐNG KÊ TỔNG QUAN -->
+        <div
+            style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; margin-bottom: 30px;">
+            <h1 id="score-display" style="font-size: 60px; color: #05cd99; margin: 10px 0;">--/10</h1>
+            <h3 id="quiz-title-display" style="color: #2b3674; margin-bottom: 20px;">Đang tải dữ liệu...</h3>
+
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <div style="background: #fffbeb; padding: 15px 20px; border-radius: 10px; border: 1px solid #fde68a;">
+                    <div style="font-size: 14px; color: #b45309;">Lượt làm bài</div>
+                    <div id="attempt-number" style="font-weight: bold; color: #92400e; font-size: 16px;">Lần --</div>
+                </div>
+                <div style="background: #f4f7fe; padding: 15px 20px; border-radius: 10px;">
+                    <div style="font-size: 14px; color: #707eae;">Bắt đầu lúc</div>
+                    <div id="start-time" style="font-weight: bold; color: #2b3674; font-size: 16px;">--:--</div>
+                </div>
+                <div style="background: #f4f7fe; padding: 15px 20px; border-radius: 10px;">
+                    <div style="font-size: 14px; color: #707eae;">Kết thúc lúc</div>
+                    <div id="end-time" style="font-weight: bold; color: #2b3674; font-size: 16px;">--:--</div>
+                </div>
+                <div style="background: #fee2e2; padding: 15px 20px; border-radius: 10px;">
+                    <div style="font-size: 14px; color: #991b1b;">Tổng thời gian</div>
+                    <div id="total-time" style="font-weight: bold; color: #d32f2f; font-size: 16px;">-- phút -- giây
+                    </div>
+                </div>
+            </div>
+
+            <button id="btn-back-detail"
+                style="margin-top: 25px; background: #4318ff; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-weight: bold; font-size: 16px; cursor: pointer;">
+                ⬅️ Về Trang Chi Tiết
+            </button>
+        </div>
+
+        <!-- KHUNG CHI TIẾT BÀI LÀM VÀ LỜI GIẢI -->
+        <h3 style="color: #2b3674; margin-bottom: 15px;">📝 Chi tiết bài làm & Lời giải:</h3>
+        <div id="review-area">
+            <p style="text-align: center; color: #888;">Đang tải chi tiết đáp án...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/ket-qua.js"></script>
+</body>
+
+</html>

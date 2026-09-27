@@ -1,0 +1,84 @@
+/* css/style.css - DÙNG CHUNG */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f4f7fe;
+    color: #2b3674;
+}
+
+/* CSS cho thanh Menu (Header) trên Laptop/iPad */
+.site-header {
+    background-color: #4318ff;
+    color: white;
+    padding: 15px 5%;
+    /* Dùng % để lề tự co giãn */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-login-header {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.user-greeting {
+    color: white;
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+.btn-logout {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: white;
+    color: #4318ff;
+}
+
+/* Ép trình duyệt web giữ nguyên dấu Enter xuống dòng của Giáo viên trên toàn hệ thống */
+.question-title,
+.tf-content,
+.modal-content,
+.modal-body,
+#preview-area,
+#review-area {
+    white-space: pre-wrap !important;
+    line-height: 1.6;
+}
+
+/* ========================================= */
+/* MÃ LỆNH RESPONSIVE CHO ĐIỆN THOẠI (< 600px) */
+/* ========================================= */
+@media screen and (max-width: 600px) {
+    .site-header {
+        flex-direction: column;
+        /* Đẩy các nút bấm xuống hàng dưới */
+        gap: 15px;
+        /* Tạo khoảng cách giữa logo và nút bấm */
+        padding: 15px;
+    }
+
+    .user-greeting {
+        display: block;
+        /* Ép chữ lời chào rớt xuống dòng cho dễ đọc */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,153 @@
+/* css/home.css - CHỈ DÙNG CHO TRANG CHỦ */
+.home-content {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(67, 24, 255, 0.05);
+}
+
+.home-content h1 {
+    color: #2b3674;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.home-content p {
+    color: #707eae;
+    font-size: 16px;
+}
+
+/* Tự động thu nhỏ chữ và lề trên màn hình điện thoại (< 600px) */
+@media screen and (max-width: 600px) {
+    .home-content {
+        padding: 25px 15px;
+        margin: 30px auto;
+    }
+
+    .home-content h1 {
+        font-size: 22px;
+    }
+}
+
+/* ========================================= */
+/* CSS CHO BẢNG QUẢN LÝ CỦA GIÁO VIÊN        */
+/* ========================================= */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-box {
+    flex-grow: 1;
+    max-width: 400px;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+}
+
+.search-box:focus {
+    border-color: #4318ff;
+    outline: none;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.quiz-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.quiz-table th {
+    background: #4318ff;
+    color: white;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.quiz-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #2b3674;
+    vertical-align: middle;
+}
+
+.quiz-table tr:hover {
+    background: #f4f7fe;
+}
+
+.action-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    transition: 0.2s;
+    white-space: nowrap;
+    margin-right: 5px;
+}
+
+.btn-edit {
+    background: #e2e8f0;
+    color: #2b3674;
+}
+
+.btn-edit:hover {
+    background: #cbd5e1;
+}
+
+.btn-assign {
+    background: #05cd99;
+    color: white;
+}
+
+.btn-assign:hover {
+    background: #04b586;
+}
+
+.pagination {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.page-btn {
+    padding: 8px 14px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #2b3674;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.page-btn:hover {
+    background: #f4f7fe;
+}
+
+.page-btn.active {
+    background: #4318ff;
+    color: white;
+    border-color: #4318ff;
+}

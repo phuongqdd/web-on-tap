@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Nộp Bài</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .result-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .result-table th, .result-table td { padding: 15px; border-bottom: 1px solid #e2e8f0; text-align: center; }
+        .result-table th { background: #4318ff; color: white; font-weight: bold; }
+        .result-table tr:hover { background-color: #f8fafc; }
+    </style>
+</head>
+<body style="background-color: #f4f7fe; padding: 20px;">
+
+    <div style="background: white; max-width: 1000px; margin: 0 auto; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <h2 id="quiz-title-display" style="color: #2b3674; margin-top: 0; margin-bottom: 10px;">Đang tải dữ liệu...</h2>
+        <p style="color: #707eae; margin-bottom: 25px;">Thống kê danh sách học sinh đã hoàn thành bài kiểm tra</p>
+
+        <div style="overflow-x: auto;">
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th style="text-align: left;">Họ và Tên HS</th>
+                        <th>Điểm số</th>
+                        <th>Thời gian làm</th>
+                        <th>Ngày nộp</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="student-list-body">
+                    <tr><td colspan="6">Đang tải danh sách...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button onclick="window.location.href='index.html'" style="margin-top: 30px; background: #e2e8f0; color: #2b3674; padding: 10px 20px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">⬅️ Quay lại Trang chủ</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/danh-sach-nop-bai.js"></script>
+</body>
+</html>

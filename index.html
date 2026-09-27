@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Toán Học Vui</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    
+    <div class="home-content" id="main-board" style="max-width: 1000px;">
+        <h1 id="welcome-text" style="color: #2b3674;">Đang tải dữ liệu...</h1>
+        
+        <!-- Vùng hiển thị động (Dashboard Giáo viên hoặc Bảng học sinh) -->
+        <div id="dashboard-area" style="margin-top: 30px;"></div>
+    </div>
+
+    <!-- Nhúng thư viện Supabase và các file JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/home.js"></script> <!-- Link tới file xử lý mới -->
+</body>
+</html>

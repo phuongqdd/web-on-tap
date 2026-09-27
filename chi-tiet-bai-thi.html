@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chi Tiết Bài Kiểm Tra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { background-color: #f4f7fe; padding: 20px; display: flex; justify-content: center; margin: 0; }
+        .main-container { background: white; width: 100%; max-width: 800px; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        
+        /* Giao diện lưới mặc định (Cho Máy tính / iPad ngang) */
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; text-align: left; }
+        .info-box { background: #f4f7fe; padding: 15px; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .info-label { font-size: 14px; color: #707eae; margin-bottom: 5px; }
+        .info-value { font-weight: bold; color: #2b3674; font-size: 16px; }
+        
+        /* Bọc bảng để có thể vuốt ngang trên điện thoại */
+        .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 15px; border-radius: 8px; }
+        .history-table { width: 100%; border-collapse: collapse; min-width: 450px; } /* Đặt min-width để bảng không bị ép dẹp */
+        .history-table th, .history-table td { padding: 12px; border-bottom: 1px solid #e2e8f0; text-align: center; font-size: 14px; }
+        .history-table th { background: #f4f7fe; color: #2b3674; font-weight: bold; white-space: nowrap; }
+
+        /* TỐI ƯU RIÊNG CHO ĐIỆN THOẠI MÀN HÌNH NHỎ (Dưới 600px) */
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .main-container { padding: 20px 15px; }
+            #quiz-title { font-size: 20px !important; margin-bottom: 15px !important; }
+            
+            /* Chuyển lưới 2 cột thành 1 cột xếp chồng lên nhau */
+            .info-grid { grid-template-columns: 1fr; gap: 10px; }
+            .info-box { padding: 12px; }
+            
+            /* Phóng to các nút bấm để dễ chạm bằng ngón tay */
+            #action-area button { width: 100%; padding: 15px !important; font-size: 16px !important; }
+            .btn-back { width: 100%; margin-top: 20px !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <h2 id="quiz-title" style="color: #4318ff; margin-top: 0; margin-bottom: 25px; font-size: 26px;">Đang tải thông tin...</h2>
+        
+        <!-- Khung thông tin quy chế -->
+        <div class="info-grid">
+            <div class="info-box">
+                <div class="info-label">⏰ Thời gian mở đề</div>
+                <div class="info-value" id="start-time">--:--</div>
+            </div>
+            <div class="info-box">
+                <div class="info-label">⌛ Thời gian đóng đề</div>
+                <div class="info-value" id="end-time">--:--</div>
+            </div>
+            <div class="info-box">
+                <div class="info-label">⏱️ Thời gian làm bài</div>
+                <div class="info-value" id="time-limit">-- phút</div>
+            </div>
+            <div class="info-box">
+                <div class="info-label">🔄 Số lượt làm bài cho phép</div>
+                <div class="info-value" id="max-attempts">-- lượt</div>
+            </div>
+        </div>
+
+        <!-- Trạng thái và Nút làm bài -->
+        <div id="status-message" style="margin-bottom: 20px; font-weight: bold; font-size: 16px;"></div>
+        <div id="action-area" style="margin-bottom: 40px;"></div>
+
+        <!-- Khung lịch sử -->
+        <h3 style="color: #2b3674; text-align: left; border-bottom: 2px solid #4318ff; padding-bottom: 10px; font-size: 18px;">🕒 Lịch sử làm bài của em</h3>
+        
+        <!-- Bọc bảng bằng thẻ div table-responsive để cho phép vuốt ngang -->
+        <div class="table-responsive">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Lần thi</th>
+                        <th>Ngày nộp</th>
+                        <th>Điểm số</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="history-body">
+                    <tr><td colspan="4">Đang tải lịch sử...</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <button class="btn-back" onclick="window.location.href='index.html'" style="margin-top: 30px; background: #e2e8f0; color: #2b3674; padding: 12px 25px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">⬅️ Quay lại Trang chủ</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/chi-tiet-bai-thi.js"></script>
+</body>
+</html>

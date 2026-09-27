@@ -1,0 +1,67 @@
+/* css/login.css - CHỈ DÙNG CHO TRANG LOGIN */
+.login-box {
+    width: 90%;
+    /* Quan trọng: Giúp khung tự co lại trên iPad/Điện thoại */
+    max-width: 400px;
+    /* Không cho khung phình to quá mức trên Laptop */
+    margin: 8vh auto;
+    /* Tự động căn giữa màn hình */
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(67, 24, 255, 0.1);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.btn-login-submit {
+    width: 100%;
+    background: #4318ff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#error-msg {
+    color: #e53e3e;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* ========================================= */
+/* MÃ LỆNH RESPONSIVE CHO ĐIỆN THOẠI (< 480px) */
+/* ========================================= */
+@media screen and (max-width: 480px) {
+    .login-box {
+        padding: 30px 20px;
+        /* Thu nhỏ khoảng trống bên trong khung để tiết kiệm diện tích */
+        margin: 5vh auto;
+    }
+
+    .btn-login-submit {
+        padding: 12px;
+        font-size: 15px;
+    }
+}

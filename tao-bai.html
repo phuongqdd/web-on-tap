@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Bài Kiểm Tra - Toán Học Vui</title>
+    
+    <!-- Nhúng Font chữ -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Nhúng CSS: File chung trước, File riêng sau -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tao-bai.css">
+</head>
+<body>
+    
+    <!-- Khung nhập thông tin bài kiểm tra -->
+    <div class="create-quiz-container">
+        <h2>📝 Tạo Bài Kiểm Tra Mới</h2>
+        
+        <div class="form-group">
+            <label>Tên bài kiểm tra (VD: Đề thi giữa kì 1)</label>
+            <input type="text" id="quiz-title" placeholder="Nhập tên bài">
+        </div>
+        
+        <div class="form-group">
+            <label>Chủ đề (VD: Đại số, Hình học)</label>
+            <input type="text" id="quiz-topic" placeholder="Nhập chủ đề">
+        </div>
+
+        <div class="form-group">
+            <label>Thời gian làm bài (Phút)</label>
+            <input type="number" id="quiz-time" placeholder="VD: 45" value="45">
+        </div>
+        
+        <button class="btn-create" onclick="luuBaiKiemTra()">Lưu Thông Tin</button>
+        <div id="status-msg" style="margin-top: 15px; font-weight: bold; text-align: center;"></div>
+    </div>
+
+    <!-- Nhúng thư viện Supabase và các file JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/tao-bai.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làm Bài Kiểm Tra - Toán Học Vui</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lam-bai.css">
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <!-- THÊM ĐOẠN NÀY ĐỂ MATHJAX HIỂU DẤU $ -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    
+    <!-- Dòng nhúng thư viện giữ nguyên -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body style="background-color: #f4f7fe;">
+
+    <!-- Thanh Header dính chặt phía trên (Sticky Header) -->
+    <div class="exam-header">
+        <div class="student-info">
+            👤 Học sinh: <span id="student-name-display" style="font-weight: 800;">Đang tải...</span>
+        </div>
+        <div class="quiz-title-display" id="quiz-title-display">
+            Đang tải dữ liệu bài kiểm tra...
+        </div>
+        <div class="timer-box">
+            ⏱️ Còn lại: <span id="countdown-timer">--:--</span>
+        </div>
+    </div>
+
+    <!-- Khu vực hiển thị danh sách câu hỏi -->
+    <div class="exam-container" id="exam-container">
+        <div id="questions-area">
+            <h3 style="text-align: center; color: #707eae; margin-top: 50px;">Đang chuẩn bị đề thi...</h3>
+        </div>
+
+        <button class="btn-submit-exam" onclick="nopBai()">📥 Nộp Bài & Hoàn Thành</button>
+    </div>
+
+    <!-- Nhúng thư viện Supabase và JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/lam-bai.js"></script>
+</body>
+
+</html>
